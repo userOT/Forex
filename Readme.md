@@ -3,7 +3,9 @@
 1) Docker. Use docker-compose up --build to start the application. 
   This command will start 2 containers - one-frame and application itself.
 Please note that in this approach need to wait until all dependencies will be resolved.
-2) If you don't want to wait, you can start only one-frame docker container and application could be started from terminal by using sbt run. Please note that first you need to change application.conf and uncomment line 381 insted of line 380 to use direct url.
+2) If you don't want to wait, you can start only one-frame docker container and application could be started from terminal by using sbt run. 
+Also need to stop the app docker container before that.
+Please note that first you need to change application.conf and uncomment line 381 insted of line 380 to use direct url.
 3) Go to port 9000 and trigger the api
 
 `docker-compose up --build
@@ -48,3 +50,4 @@ It looks for me without domain specific, and I would spend much time for refacto
 2) Maybe some test cases
 3) I used a single cache instead of currency specific, it could be not so giant and update only specific currency
 4) Cache should be not in memory and something like Redis or SQL DB.
+5) Not used custom Execution Context

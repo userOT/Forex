@@ -1,3 +1,0 @@
-object SomeSpec extends App {
-
-}
