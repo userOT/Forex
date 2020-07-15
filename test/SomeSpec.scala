@@ -1,0 +1,3 @@
+object SomeSpec extends App {
+
+}

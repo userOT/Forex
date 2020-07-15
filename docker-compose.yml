@@ -1,0 +1,16 @@
+version: '2'
+services:
+
+  app:
+    container_name: app
+    build: .
+    ports:
+      - "9000:9000"
+    depends_on:
+      - "one-frame"
+
+  one-frame:
+    container_name: one-frame
+    image: "paidyinc/one-frame"
+    ports:
+      - "8080:8080"
